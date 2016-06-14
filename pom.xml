@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>nz.geek.karit.app</groupId>
+  <artifactId>app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>app</name>
+  <url>http://maven.apache.org</url>
+
+ <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>  
+        <groupId>org.reflections</groupId >  
+        <artifactId>reflections</artifactId >  
+        <version> 0.9.9-RC1</version >  
+    </dependency>  
+     <dependency>  
+        <groupId> org.apache.poi</groupId >  
+        <artifactId> poi-ooxml</artifactId>  
+        <version> 3.10-FINAL</version >  
+    </dependency>
+	<dependency>  
+        <groupId>org.apache.maven</groupId >  
+        <artifactId>maven-archiver</artifactId>  
+        <version>2.2</version >  
+    </dependency>
+
+  </dependencies>
+
+<pluginRepositories>
+     <pluginRepository>
+        <id>SmartBearPluginRepository</id>
+        <url>http://www.soapui.org/repository/maven2/</url>
+    </pluginRepository>
+</pluginRepositories>
+
+<build>
+<plugins>
+  <plugin>
+  <groupId>com.smartbear.soapui</groupId>
+  <artifactId>soapui-maven-plugin</artifactId>
+  <!--This is the version of soapUI to grab from plugin repo-->
+  <!--At the time of writing the 3.0.1 plugin had not been created-->
+  <version>5.2.1</version>
+   
+  <configuration>
+    <!--The location of your soapUI setting file-->
+    <!-- <projectFile>E:\maven-soapui\Live-soapui-project.xml</projectFile> -->
+    <projectFile>aaaa.xml</projectFile>
+    <!--Where to place the output of the run-->
+   <!--  <outputFolder>E:\maven-soapui\</outputFolder> -->
+    <!-- Make the jUnit results file -->
+   <!--  <junitReport>true</junitReport> -->
+  <!--   <exportAll>true</exportAll> -->
+    <testFailIgnore>true</testFailIgnore>
+    <reportFormat>html</reportFormat> 
+    <reportName>report.html</reportName>
+  </configuration>
+  <executions>
+    <execution>
+      <id>soapUI</id>
+      <!--Run as part of the test phase in the Maven lifecycle-->
+      <phase>test</phase>
+      <goals>
+        <!--Run the test phase of eviware:maven-soapui-plugin-->
+        <goal>test</goal>
+      </goals>
+    
+    <configuration>  
+
+      <projectProperties>  
+        <value> message=API TEST</value>  
+      </projectProperties>  
+    </configuration>  
+    </execution>
+  </executions>
+  </plugin>
+</plugins>
+</build>
+</project>
