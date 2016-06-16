@@ -9,7 +9,7 @@ import com.eviware.soapui.support.types.StringToStringMap
 //根据案例修改待传入的参数
 def params_list =  ['cityname=朝阳']
 
-log.info '删除回复的回复'
+
 //待跑用例名称
 def testcase_name = 'aaa'
 def teststep_name = 'aaa'
@@ -29,6 +29,8 @@ def getContentOut(String testcase_name,String teststep_name,List request_params)
 
 	for(i in request_params){
 		testcase.testSteps['testdata'].setPropertyValue(i.split('=')[0],i.split('=')[1])
+		log.info i.split('=')[0]
+		log.info i.split('=')[1]
 		}
 
 	def contextMap = new StringToObjectMap(context)
