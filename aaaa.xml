@@ -39,6 +39,7 @@ def getContentOut(String testcase_name,String teststep_name,List request_params)
 	def testcase_stepcount = testcase.getTestStepCount() 
 
 	def response_content = runner.getResults()[testcase_stepcount-1].getResponseContent()
+	log.info response_content
      //还原设置参数
 	tearDownInput(testcase_name,request_params)
 
