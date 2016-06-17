@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="2b16cb93-f520-4601-bd1b-ccae16446e35" activeEnvironment="Default" name="tianqi" resourceRoot="" soapui-version="5.1.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="4454782c-6c82-4575-9910-5c7f19c46cba" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://apis.baidu.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://apis.baidu.com</con:endpoint></con:endpoints><con:resource name="Citylist" path="/apistore/weatherservice/citylist" id="5f6c1d85-5bcd-42af-87c7-66ee1dbabcc7"><con:settings/><con:parameters><con:parameter><con:name>cityname</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>apikey</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Citylist" id="fc01f55a-8a15-4f1c-a209-706ab16339d1" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/plain</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=GBK</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="1d5df631-456d-4f00-9bb2-afb5c061f4df" mediaType="application/json"><con:settings/><con:endpoint>http://apis.baidu.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>cityname</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="80c43508-1f76-47fc-a185-56ba5e8d664d" name="common_testsuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="7e0e32d1-e5e8-4a07-82ba-3e287b079bd2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="cookie" searchProperties="true"><con:settings/><con:testStep type="properties" name="user_cookie" id="3e2411ee-0f32-463c-8706-448f3e4ed19c"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>baiduapi</con:name><con:value>apikey=f250ae187f9cb2af27a3d9c37a5a143e</con:value></con:property></con:properties></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="13c50548-e854-4153-969b-481f5c1ba824" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="aaa" searchProperties="true"><con:settings/><con:testStep type="properties" name="testdata" id="cb1b894e-bfd1-438a-9497-42ae66ae395c"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>cityname</con:name><con:value/></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="7528f273-03ba-42ac-8d8c-983b52635571"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>cityname</con:name><con:sourceType>cityname</con:sourceType><con:sourceStep>testdata</con:sourceStep><con:targetType>cityname</con:targetType><con:targetStep>aaa</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="aaa" id="fd9fe0ec-d3c9-497d-8a52-4aa1639257f6"><con:settings/><con:config service="http://apis.baidu.com" resourcePath="/apistore/weatherservice/citylist" methodName="Citylist" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="aaa" id="1d5df631-456d-4f00-9bb2-afb5c061f4df" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Cookie" value="" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://apis.baidu.com</con:endpoint><con:request/><con:originalUri>http://apis.baidu.com/apistore/weatherservice/citylist</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="cityname" value="柳州" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>cityname</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="6afa4da4-c733-45c5-8292-9f25c0ae2053" name="1312"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="3399dec7-0040-4c0a-8fd5-686a0887f97e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="40c50490-9ccf-4796-b812-3205677e6417"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
+<con:soapui-project id="084604aa-b42e-453b-8da4-4bdf73ab2aa2" activeEnvironment="Default" name="getHistory" resourceRoot="" soapui-version="5.1.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="c06ec1c2-0bb2-484e-b983-919ea74bc6b8" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://api.bilibili.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://api.bilibili.com</con:endpoint></con:endpoints><con:resource name="get" path="/x/v2/history" id="2b579600-14b7-4322-adf0-b1e377b9b4f6"><con:settings/><con:parameters><con:parameter><con:name>pn</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>ps</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="get" id="623ee5dc-e9d3-4240-8325-ee06bf375291" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:his="http://api.bilibili.com/x/v2/history">his:Response</con:element></con:representation><con:request name="Request 1" id="72f5344a-ebc4-4d4e-adaf-8ca153473d14" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://api.bilibili.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>pn</con:entry><con:entry>ps</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="del" path="/x/v2/history/del" id="053fa150-d9ab-45d7-af1a-4c11276971f1"><con:settings/><con:parameters><con:parameter><con:name>aid</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="del" id="538f95fb-3f19-4c11-88b6-29f6dfd016d1" method="POST"><con:settings/><con:parameters/><con:request name="Request 1" id="ce5d3dc4-8843-4434-a975-d07777061d2d" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.bilibili.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>aid</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="clear" path="/x/v2/history/clear" id="205867dc-ff9f-4cee-91ec-438608dc890e"><con:settings/><con:parameters/><con:method name="clear" id="704e001f-dba3-4d56-b41d-4837b9088075" method="POST"><con:settings/><con:parameters/><con:request name="Request 1" id="67635d6b-9861-48e5-b774-dd5e03eeb4c2" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.bilibili.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="add" path="/x/v2/history/add" id="04423fd3-8f5e-4cf0-8471-fd0ef7d4814c"><con:settings/><con:parameters><con:parameter><con:name>aid</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="add" id="dfc86394-f23b-451e-abb9-2567a595ecc7" method="POST"><con:settings/><con:parameters/><con:request name="Request 1" id="b179218b-49d0-45e9-b016-a5c4f238d69c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.bilibili.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry>aid</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="18a29495-b321-4a0b-81c1-a22f46489716" name="common_testsuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8d08e18b-74e8-45fc-93f7-4964f84b2d70" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="history-clear" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="history-clear" id="6fabbc62-f327-4608-96f2-46dceafe58a9"><con:settings/><con:config service="http://api.bilibili.com" resourcePath="/x/v2/history/clear" methodName="clear" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="history-clear" id="67635d6b-9861-48e5-b774-dd5e03eeb4c2" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Cookie" value="" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://api.bilibili.com</con:endpoint><con:request/><con:originalUri>http://api.bilibili.com/x/v2/history/clear</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>6bf2f3ba-a523-46db-b192-bc38cae987ff</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="edc59809-4edf-48d7-b5e1-29150560de2a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="history-add" searchProperties="true"><con:settings/><con:testStep type="properties" name="testdata" id="cb405e49-b126-4259-9a28-d7e9f055a0b1"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>aid</con:name><con:value/></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="70adc7f7-6a52-4275-bff3-d98ec8d77a7b"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>aid</con:name><con:sourceType>aid</con:sourceType><con:sourceStep>testdata</con:sourceStep><con:targetType>aid</con:targetType><con:targetStep>history-add</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="history-add" id="2483bbeb-332f-45a7-bce1-2e9ed0de61fe"><con:settings/><con:config service="http://api.bilibili.com" resourcePath="/x/v2/history/add" methodName="add" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="history-add" id="b179218b-49d0-45e9-b016-a5c4f238d69c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Cookie" value="" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://api.bilibili.com</con:endpoint><con:request/><con:originalUri>http://api.bilibili.com/x/v2/history/add</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="aid" value="2880579" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>aid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>6bf2f3ba-a523-46db-b192-bc38cae987ff</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="524681d6-cf39-4421-b090-9f624b65ed4e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="history-del" searchProperties="true"><con:settings/><con:testStep type="properties" name="testdata" id="8bd79f8d-31aa-48c8-bd12-c80456f2a5f1"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>aid</con:name><con:value/></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="3a29bd77-0335-4469-90d1-cc3668c7e904"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>aid</con:name><con:sourceType>aid</con:sourceType><con:sourceStep>testdata</con:sourceStep><con:targetType>aid</con:targetType><con:targetStep>history-del</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="history-del" id="6fbaf2dd-7cc5-4f04-a4f9-2c3d6740a031"><con:settings/><con:config service="http://api.bilibili.com" resourcePath="/x/v2/history/del" methodName="del" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="history-del" id="ce5d3dc4-8843-4434-a975-d07777061d2d" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Cookie" value="" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://api.bilibili.com</con:endpoint><con:request/><con:originalUri>http://api.bilibili.com/x/v2/history/del</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="aid" value="103" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>aid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>6bf2f3ba-a523-46db-b192-bc38cae987ff</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="fa22447a-0e05-42b7-87ee-864a98c1dda2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="history-get" searchProperties="true"><con:settings/><con:testStep type="properties" name="testdata" id="0f919d88-755d-456b-a648-b674802743c0"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>pn</con:name><con:value/></con:property><con:property><con:name>ps</con:name><con:value/></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="aa6021c0-1cf9-47d6-9df7-87052941332f"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>pn</con:name><con:sourceType>pn</con:sourceType><con:sourceStep>testdata</con:sourceStep><con:targetType>pn</con:targetType><con:targetStep>history-get</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>ps</con:name><con:sourceType>ps</con:sourceType><con:sourceStep>testdata</con:sourceStep><con:targetType>ps</con:targetType><con:targetStep>history-get</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="history-get" id="9086abb9-30b9-41c0-9990-743c480db1bc"><con:settings/><con:config service="http://api.bilibili.com" resourcePath="/x/v2/history" methodName="get" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="history-get" id="72f5344a-ebc4-4d4e-adaf-8ca153473d14" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Cookie" value="" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://api.bilibili.com</con:endpoint><con:request/><con:originalUri>http://api.bilibili.com/x/v2/history</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="pn" value="1"/>
+  <con:entry key="ps" value="10"/>
+</con:parameters><con:parameterOrder><con:entry>pn</con:entry><con:entry>ps</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>9618485d-6b67-42c8-ba31-0e8cd4c652e0</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="ef209fa1-dc4c-4d7d-aecc-d58dc80a7042" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="cookie" searchProperties="true"><con:settings/><con:testStep type="properties" name="user_cookie" id="251eea52-85ed-40ca-b499-4bb0fe0f5067"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>teardown</con:name><con:value/></con:property><con:property><con:name>usernixp</con:name><con:value>DedeUserID=17668003;DedeUserID__ckMd5=8aa32229517ebaac;SESSDATA=7bf20cf0%2C1468721483%2C2d986ada;_dfcaptcha=26235d5115a0c5f683f0382424153bb7;sid=aroj0p2g;</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="properties" name="access_key" id="ba1d05bb-fc11-47df-8c34-d6032ee7bae2"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access000</con:name><con:value>access_key=d3ac48906b9ffafa4524a9cdee9e7455</con:value></con:property></con:properties></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:testSuite id="51bc86c9-bcaa-4b78-9fd2-fbd6e4512e1e" name="case"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ff7139ec-659a-4138-805a-ecad77030c9c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="case" searchProperties="true"><con:settings/><con:testStep type="groovy" name="获取历史记录" id="8118561d-a912-4070-a3ea-b4b91be5e27d"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
 import groovy.json.JsonSlurper
 import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
 import org.apache.http.impl.cookie.BasicClientCookie
 import com.eviware.soapui.support.types.StringToStringMap
-
-
-//根据案例修改待传入的参数
-def params_list =  ['cityname=朝阳']
-
-
-//待跑用例名称
-def testcase_name = 'aaa'
-def teststep_name = 'aaa'
-
-Cookie(testcase_name,teststep_name,'baiduapi')
-
-//执行用例
+//配置参数
+def params_list =  ['pn=1','ps=10']
+log.info '获取历史记录'
+//问题记录1.修改ps的值可能会导致获取播放历史的时候返回504的问题，比如100,200
+//			2.
+//选择执行的测试套件
+def testcase_name = 'history-get'
+def teststep_name = 'history-get'
+//设置用户Cookies
+setCookies(testcase_name, teststep_name,'usernixp')
 def re = getContentOut(testcase_name,teststep_name,params_list)
-//校验点
-//assert(re.errNum == 0)
-log.info re
 
-//getContentOut 模拟请求
+//检验返回码
+//assert(re.code == 0)
+log.info(re)
+
 def getContentOut(String testcase_name,String teststep_name,List request_params){
 	def testproject = testRunner.testCase.testSuite.project
 	def testcase = testproject.testSuites['common_testsuite'].testCases[testcase_name]
 
 	for(i in request_params){
 		testcase.testSteps['testdata'].setPropertyValue(i.split('=')[0],i.split('=')[1])
-		log.info i.split('=')[0]
-		log.info i.split('=')[1]
 		}
 
 	def contextMap = new StringToObjectMap(context)
@@ -52,14 +50,12 @@ def getContentOut(String testcase_name,String teststep_name,List request_params)
 	return re
 }
 
-//tearDownInput 还原参数设置
 def tearDownInput(String testcase_name,List request_params){
 	for(i in request_params){
 		testRunner.testCase.testSuite.project.testSuites['common_testsuite'].testCases[testcase_name].testSteps['testdata'].setPropertyValue(i.split('=')[0],'')
 		}
 }
 
-//setCookies 设置cookies
 def setCookies(String testcase_name,String teststep_name,String userid){
 	//按用户名读取预置的cookie值
 	def testproject = testRunner.testCase.testSuite.project
@@ -69,48 +65,48 @@ def setCookies(String testcase_name,String teststep_name,String userid){
 	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
 }
 
-def Cookie(String testcase_name,String teststep_name,String userid){
+def setaptcha(String userid,List prams_list){
 	//按用户名读取预置的cookie值
 	def testproject = testRunner.testCase.testSuite.project
 	def cookies_str = testproject.testSuites['common_testsuite'].testCases['cookie'].testSteps['user_cookie'].getPropertyValue(userid)
-	def reqheaders = new StringToStringMap()
-//	reqheaders.put('Cookie',cookies_str)
-	reqheaders.put(cookies_str.split('=')[0],cookies_str.split('=')[1])
-	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
+	
+	def values = cookies_str.split(';')
+	
+	for(i in (0..(values.size()-1))){
+		if(values[i].split('=')[0] == '_dfcaptcha') {
+			prams_list.add('captcha=' + values[i].split('=')[1])
+			return prams_list
+		}
+	}
 }
-
-</script></con:config></con:testStep><con:testStep type="delay" name="delay1" id="ed2f0388-c262-4578-9c98-7b6c35777034"><con:settings/><con:config><delay>1000</delay></con:config></con:testStep><con:testStep type="groovy" name="1" id="b46115e2-b2b7-4efc-893f-d6eff324a319"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
+</script></con:config></con:testStep><con:testStep type="groovy" name="增加历史记录" id="5f89b8ef-16ee-4b2e-8f7c-e32211983b76"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
 import groovy.json.JsonSlurper
 import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
 import org.apache.http.impl.cookie.BasicClientCookie
 import com.eviware.soapui.support.types.StringToStringMap
-
-
-//根据案例修改待传入的参数
-def params_list =  ['cityname=孟州']
-//def params_list =  ['cityname=15']
-
-//待跑用例名称
-def testcase_name = 'aaa'
-def teststep_name = 'aaa'
-
-Cookie(testcase_name,teststep_name,'baiduapi')
-
-//执行用例
+//配置参数
+def params_list =  ['aid=2880579']
+log.info('增加历史记录')
+//log参数，可校验是否正确
+log.info(params_list)
+//选择执行的测试套件
+def testcase_name = 'history-add'
+def teststep_name = 'history-add'
+//设置用户Cookies
+setCookies(testcase_name, teststep_name,'usernixp')
 def re = getContentOut(testcase_name,teststep_name,params_list)
-//校验点
-//assert(re.errNum == 0)
+
+//检验返回码
+assert(re.code == 0)
 log.info re
 
-//getContentOut 模拟请求
+//模拟请求
 def getContentOut(String testcase_name,String teststep_name,List request_params){
 	def testproject = testRunner.testCase.testSuite.project
 	def testcase = testproject.testSuites['common_testsuite'].testCases[testcase_name]
 
 	for(i in request_params){
 		testcase.testSteps['testdata'].setPropertyValue(i.split('=')[0],i.split('=')[1])
-		log.info i.split('=')[0]
-		log.info i.split('=')[1]
 		}
 
 	def contextMap = new StringToObjectMap(context)
@@ -132,14 +128,13 @@ def getContentOut(String testcase_name,String teststep_name,List request_params)
 	return re
 }
 
-//tearDownInput 还原参数设置
 def tearDownInput(String testcase_name,List request_params){
 	for(i in request_params){
 		testRunner.testCase.testSuite.project.testSuites['common_testsuite'].testCases[testcase_name].testSteps['testdata'].setPropertyValue(i.split('=')[0],'')
 		}
 }
 
-//setCookies 设置cookies
+//请求头中添加cookie，针对pc端用户校验的情况
 def setCookies(String testcase_name,String teststep_name,String userid){
 	//按用户名读取预置的cookie值
 	def testproject = testRunner.testCase.testSuite.project
@@ -148,49 +143,50 @@ def setCookies(String testcase_name,String teststep_name,String userid){
 	reqheaders.put('Cookie',cookies_str)
 	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
 }
-
-def Cookie(String testcase_name,String teststep_name,String userid){
+//设置验证码
+def setaptcha(String userid,List prams_list){
 	//按用户名读取预置的cookie值
 	def testproject = testRunner.testCase.testSuite.project
 	def cookies_str = testproject.testSuites['common_testsuite'].testCases['cookie'].testSteps['user_cookie'].getPropertyValue(userid)
-	def reqheaders = new StringToStringMap()
-//	reqheaders.put('Cookie',cookies_str)
-	reqheaders.put(cookies_str.split('=')[0],cookies_str.split('=')[1])
-	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
+	
+	def values = cookies_str.split(';')
+	
+	for(i in (0..(values.size()-1))){
+		if(values[i].split('=')[0] == '_dfcaptcha') {
+			prams_list.add('captcha=' + values[i].split('=')[1])
+			return prams_list
+		}
+	}
+	
 }
-
-</script></con:config></con:testStep><con:testStep type="delay" name="delay2" id="331512b6-6720-47a3-adab-9ef631969e6b"><con:settings/><con:config><delay>1000</delay></con:config></con:testStep><con:testStep type="groovy" name="2" id="4efaa207-e2d9-485a-9032-878f99dba955"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
+</script></con:config></con:testStep><con:testStep type="groovy" name="删除单个历史记录" id="c4cfa5c4-fe5a-4857-a592-9b28b708c604"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
 import groovy.json.JsonSlurper
 import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
 import org.apache.http.impl.cookie.BasicClientCookie
 import com.eviware.soapui.support.types.StringToStringMap
+//配置参数
+def params_list =  ['aid=103']
+log.info('删除某个历史记录')
 
-
-//根据案例修改待传入的参数
-def params_list =  ['cityname=上海']
-//def params_list =  ['cityname=14']
-
-//待跑用例名称
-def testcase_name = 'aaa'
-def teststep_name = 'aaa'
-
-Cookie(testcase_name,teststep_name,'baiduapi')
-
-//执行用例
+log.info(params_list)
+//选择执行的测试套件
+def testcase_name = 'history-del'
+def teststep_name = 'history-del'
+//设置用户Cookies
+setCookies(testcase_name, teststep_name,'usernixp')
 def re = getContentOut(testcase_name,teststep_name,params_list)
-//校验点
-//assert(re.errNum == 0)
-log.info re
 
-//getContentOut 模拟请求
+//检验返回码
+assert(re.code == 0)
+log.info(re)
+
+
 def getContentOut(String testcase_name,String teststep_name,List request_params){
 	def testproject = testRunner.testCase.testSuite.project
 	def testcase = testproject.testSuites['common_testsuite'].testCases[testcase_name]
 
 	for(i in request_params){
 		testcase.testSteps['testdata'].setPropertyValue(i.split('=')[0],i.split('=')[1])
-		log.info i.split('=')[0]
-		log.info i.split('=')[1]
 		}
 
 	def contextMap = new StringToObjectMap(context)
@@ -212,14 +208,13 @@ def getContentOut(String testcase_name,String teststep_name,List request_params)
 	return re
 }
 
-//tearDownInput 还原参数设置
 def tearDownInput(String testcase_name,List request_params){
 	for(i in request_params){
 		testRunner.testCase.testSuite.project.testSuites['common_testsuite'].testCases[testcase_name].testSteps['testdata'].setPropertyValue(i.split('=')[0],'')
 		}
 }
 
-//setCookies 设置cookies
+
 def setCookies(String testcase_name,String teststep_name,String userid){
 	//按用户名读取预置的cookie值
 	def testproject = testRunner.testCase.testSuite.project
@@ -229,48 +224,50 @@ def setCookies(String testcase_name,String teststep_name,String userid){
 	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
 }
 
-def Cookie(String testcase_name,String teststep_name,String userid){
+
+def setaptcha(String userid,List prams_list){
 	//按用户名读取预置的cookie值
 	def testproject = testRunner.testCase.testSuite.project
 	def cookies_str = testproject.testSuites['common_testsuite'].testCases['cookie'].testSteps['user_cookie'].getPropertyValue(userid)
-	def reqheaders = new StringToStringMap()
-//	reqheaders.put('Cookie',cookies_str)
-	reqheaders.put(cookies_str.split('=')[0],cookies_str.split('=')[1])
-	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
+	
+	def values = cookies_str.split(';')
+	
+	for(i in (0..(values.size()-1))){
+		if(values[i].split('=')[0] == '_dfcaptcha') {
+			prams_list.add('captcha=' + values[i].split('=')[1])
+			return prams_list
+		}
+	}
+	
 }
-
-</script></con:config></con:testStep><con:testStep type="delay" name="delay3" id="6653946f-e9a0-40dc-a406-dd818979218b"><con:settings/><con:config><delay>1000</delay></con:config></con:testStep><con:testStep type="groovy" name="3" id="0c75e1f9-1ec5-48d6-b4eb-ab4e0f9c3c63"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
+</script></con:config></con:testStep><con:testStep type="groovy" name="清除所有历史记录" id="b9b52ad6-9c61-418f-a2b3-eedc084b8483"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
 import groovy.json.JsonSlurper
 import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
 import org.apache.http.impl.cookie.BasicClientCookie
 import com.eviware.soapui.support.types.StringToStringMap
+//配置参数
+def params_list =  []
+log.info('清除历史记录')
 
-
-//根据案例修改待传入的参数
-def params_list =  ['cityname=北京']
-//def params_list =  ['cityname=13']
-
-//待跑用例名称
-def testcase_name = 'aaa'
-def teststep_name = 'aaa'
-
-Cookie(testcase_name,teststep_name,'baiduapi')
-
-//执行用例
+log.info(params_list)
+//选择执行的测试套件
+def testcase_name = 'history-clear'
+def teststep_name = 'history-clear'
+//设置用户Cookies
+setCookies(testcase_name, teststep_name,'usernixp')
 def re = getContentOut(testcase_name,teststep_name,params_list)
-//校验点
-//assert(re.errNum == 0)
-log.info re
 
-//getContentOut 模拟请求
+//检验返回码
+assert(re.code == 0)
+log.info(re)
+
+
 def getContentOut(String testcase_name,String teststep_name,List request_params){
 	def testproject = testRunner.testCase.testSuite.project
 	def testcase = testproject.testSuites['common_testsuite'].testCases[testcase_name]
 
 	for(i in request_params){
 		testcase.testSteps['testdata'].setPropertyValue(i.split('=')[0],i.split('=')[1])
-		log.info i.split('=')[0]
-		log.info i.split('=')[1]
 		}
 
 	def contextMap = new StringToObjectMap(context)
@@ -292,14 +289,14 @@ def getContentOut(String testcase_name,String teststep_name,List request_params)
 	return re
 }
 
-//tearDownInput 还原参数设置
+
 def tearDownInput(String testcase_name,List request_params){
 	for(i in request_params){
 		testRunner.testCase.testSuite.project.testSuites['common_testsuite'].testCases[testcase_name].testSteps['testdata'].setPropertyValue(i.split('=')[0],'')
 		}
 }
 
-//setCookies 设置cookies
+
 def setCookies(String testcase_name,String teststep_name,String userid){
 	//按用户名读取预置的cookie值
 	def testproject = testRunner.testCase.testSuite.project
@@ -309,172 +306,20 @@ def setCookies(String testcase_name,String teststep_name,String userid){
 	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
 }
 
-def Cookie(String testcase_name,String teststep_name,String userid){
+
+def setaptcha(String userid,List prams_list){
 	//按用户名读取预置的cookie值
 	def testproject = testRunner.testCase.testSuite.project
 	def cookies_str = testproject.testSuites['common_testsuite'].testCases['cookie'].testSteps['user_cookie'].getPropertyValue(userid)
-	def reqheaders = new StringToStringMap()
-//	reqheaders.put('Cookie',cookies_str)
-	reqheaders.put(cookies_str.split('=')[0],cookies_str.split('=')[1])
-	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
-}
-
-</script></con:config></con:testStep><con:testStep type="delay" name="Delay4" id="24312a1c-b719-4522-a5e8-d8f72a1fb49b"><con:settings/><con:config><delay>1000</delay></con:config></con:testStep><con:testStep type="groovy" name="4" id="52fa7d6b-05bf-47d2-b9db-8e849470e7ce"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
-import groovy.json.JsonSlurper
-import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
-import org.apache.http.impl.cookie.BasicClientCookie
-import com.eviware.soapui.support.types.StringToStringMap
-
-
-//根据案例修改待传入的参数
-def params_list =  ['cityname=葫芦岛']
-//def params_list =  ['cityname=12']
-
-//待跑用例名称
-def testcase_name = 'aaa'
-def teststep_name = 'aaa'
-
-Cookie(testcase_name,teststep_name,'baiduapi')
-
-//执行用例
-def re = getContentOut(testcase_name,teststep_name,params_list)
-//校验点
-//assert(re.errNum == 0)
-log.info re
-
-//getContentOut 模拟请求
-def getContentOut(String testcase_name,String teststep_name,List request_params){
-	def testproject = testRunner.testCase.testSuite.project
-	def testcase = testproject.testSuites['common_testsuite'].testCases[testcase_name]
-
-	for(i in request_params){
-		testcase.testSteps['testdata'].setPropertyValue(i.split('=')[0],i.split('=')[1])
-		log.info i.split('=')[0]
-		log.info i.split('=')[1]
-		}
-
-	def contextMap = new StringToObjectMap(context)
-	def runner = testcase.run(contextMap,false)
-	//获取测试的请求
-	def testcase_stepcount = testcase.getTestStepCount() 
-
-	def response_content = runner.getResults()[testcase_stepcount-1].getResponseContent()
-     //还原设置参数
-	tearDownInput(testcase_name,request_params)
-
-	//还原cookie设置
-	setCookies(testcase_name, teststep_name,'teardown')
-
-     //把测试结果json化后传出去
-	def slurper = new JsonSlurper()
-	def re = slurper.parseText(response_content)
 	
-	return re
-}
-
-//tearDownInput 还原参数设置
-def tearDownInput(String testcase_name,List request_params){
-	for(i in request_params){
-		testRunner.testCase.testSuite.project.testSuites['common_testsuite'].testCases[testcase_name].testSteps['testdata'].setPropertyValue(i.split('=')[0],'')
-		}
-}
-
-//setCookies 设置cookies
-def setCookies(String testcase_name,String teststep_name,String userid){
-	//按用户名读取预置的cookie值
-	def testproject = testRunner.testCase.testSuite.project
-	def cookies_str = testproject.testSuites['common_testsuite'].testCases['cookie'].testSteps['user_cookie'].getPropertyValue(userid)
-	def reqheaders = new StringToStringMap()
-	reqheaders.put('Cookie',cookies_str)
-	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
-}
-
-def Cookie(String testcase_name,String teststep_name,String userid){
-	//按用户名读取预置的cookie值
-	def testproject = testRunner.testCase.testSuite.project
-	def cookies_str = testproject.testSuites['common_testsuite'].testCases['cookie'].testSteps['user_cookie'].getPropertyValue(userid)
-	def reqheaders = new StringToStringMap()
-//	reqheaders.put('Cookie',cookies_str)
-	reqheaders.put(cookies_str.split('=')[0],cookies_str.split('=')[1])
-	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
-}
-</script></con:config></con:testStep><con:testStep type="delay" name="Delay5" id="c3668ae3-f7c7-4d85-b32e-ccb1957e1092"><con:settings/><con:config><delay>1000</delay></con:config></con:testStep><con:testStep type="groovy" name="5" id="f41ff61d-a154-4ee0-9d41-3b7d5a2e094d"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
-import groovy.json.JsonSlurper
-import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
-import org.apache.http.impl.cookie.BasicClientCookie
-import com.eviware.soapui.support.types.StringToStringMap
-
-
-//根据案例修改待传入的参数
-def params_list =  ['cityname=柳州']
-//def params_list =  ['cityname=11']
-
-//待跑用例名称
-def testcase_name = 'aaa'
-def teststep_name = 'aaa'
-
-Cookie(testcase_name,teststep_name,'baiduapi')
-
-//执行用例
-def re = getContentOut(testcase_name,teststep_name,params_list)
-//校验点
-//assert(re.errNum == 0)
-log.info re
-
-//getContentOut 模拟请求
-def getContentOut(String testcase_name,String teststep_name,List request_params){
-	def testproject = testRunner.testCase.testSuite.project
-	def testcase = testproject.testSuites['common_testsuite'].testCases[testcase_name]
-
-	for(i in request_params){
-		testcase.testSteps['testdata'].setPropertyValue(i.split('=')[0],i.split('=')[1])
-		log.info i.split('=')[0]
-		log.info i.split('=')[1]
-		}
-
-	def contextMap = new StringToObjectMap(context)
-	def runner = testcase.run(contextMap,false)
-	//获取测试的请求
-	def testcase_stepcount = testcase.getTestStepCount() 
-
-	def response_content = runner.getResults()[testcase_stepcount-1].getResponseContent()
-     //还原设置参数
-	tearDownInput(testcase_name,request_params)
-
-	//还原cookie设置
-	setCookies(testcase_name, teststep_name,'teardown')
-
-     //把测试结果json化后传出去
-	def slurper = new JsonSlurper()
-	def re = slurper.parseText(response_content)
+	def values = cookies_str.split(';')
 	
-	return re
-}
-
-//tearDownInput 还原参数设置
-def tearDownInput(String testcase_name,List request_params){
-	for(i in request_params){
-		testRunner.testCase.testSuite.project.testSuites['common_testsuite'].testCases[testcase_name].testSteps['testdata'].setPropertyValue(i.split('=')[0],'')
+	for(i in (0..(values.size()-1))){
+		if(values[i].split('=')[0] == '_dfcaptcha') {
+			prams_list.add('captcha=' + values[i].split('=')[1])
+			return prams_list
 		}
+	}
+	
 }
-
-//setCookies 设置cookies
-def setCookies(String testcase_name,String teststep_name,String userid){
-	//按用户名读取预置的cookie值
-	def testproject = testRunner.testCase.testSuite.project
-	def cookies_str = testproject.testSuites['common_testsuite'].testCases['cookie'].testSteps['user_cookie'].getPropertyValue(userid)
-	def reqheaders = new StringToStringMap()
-	reqheaders.put('Cookie',cookies_str)
-	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
-}
-
-def Cookie(String testcase_name,String teststep_name,String userid){
-	//按用户名读取预置的cookie值
-	def testproject = testRunner.testCase.testSuite.project
-	def cookies_str = testproject.testSuites['common_testsuite'].testCases['cookie'].testSteps['user_cookie'].getPropertyValue(userid)
-	def reqheaders = new StringToStringMap()
-//	reqheaders.put('Cookie',cookies_str)
-	reqheaders.put(cookies_str.split('=')[0],cookies_str.split('=')[1])
-	testproject.testSuites['common_testsuite'].getTestCaseByName(testcase_name).getTestStepByName(teststep_name).testRequest.setRequestHeaders(reqheaders)	
-}
-</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>6653946f-e9a0-40dc-a406-dd818979218b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>c3668ae3-f7c7-4d85-b32e-ccb1957e1092</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>24312a1c-b719-4522-a5e8-d8f72a1fb49b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/></con:soapui-project>
+</script></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>8118561d-a912-4070-a3ea-b4b91be5e27d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>5f89b8ef-16ee-4b2e-8f7c-e32211983b76</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>c4cfa5c4-fe5a-4857-a592-9b28b708c604</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>b9b52ad6-9c61-418f-a2b3-eedc084b8483</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/></con:soapui-project>
