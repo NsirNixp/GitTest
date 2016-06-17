@@ -34,6 +34,7 @@
                         </goals>
                         <configuration>
                             <projectFile>aaaa.xml</projectFile>
+                            <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=Hello World!</value>
                             </projectProperties>
