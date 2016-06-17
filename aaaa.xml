@@ -240,7 +240,7 @@ def setaptcha(String userid,List prams_list){
 	}
 	
 }
-</script></con:config></con:testStep><con:testStep type="groovy" name="清除所有历史记录" id="b9b52ad6-9c61-418f-a2b3-eedc084b8483"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
+</script></con:config></con:testStep><con:testStep type="groovy" name="清除所有历史记录" id="b9b52ad6-9c61-418f-a2b3-eedc084b8483" disabled="true"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
 import groovy.json.JsonSlurper
 import com.eviware.soapui.impl.wsdl.support.http.HttpClientSupport
 import org.apache.http.impl.cookie.BasicClientCookie
