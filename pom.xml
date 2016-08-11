@@ -10,14 +10,13 @@
     <version>1.0-SNAPSHOT</version>
     <name>Maven 2 SoapUI Sample</name>
     <url>http://maven.apache.org</url>
-                <dependencies>
-                    <dependency>
-  <groupId>commons-codec</groupId>
-  <artifactId>commons-codec</artifactId>
-  <version>1.4</version>
-</dependency>
-                                    </dependencies>    
-
+    <dependencies>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.10</version>
+        </dependency>
+    </dependencies>
     <pluginRepositories>
         <pluginRepository>
             <id>SmartBearPluginRepository</id>
