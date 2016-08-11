@@ -33,7 +33,7 @@
                         <artifactId>rsa</artifactId>
                         <version>1.0.0</version>
                         <scope>system</scope>
-                        <systemPath>${basedir}/libs/com.bilibili.rsa.jar</systemPath>
+                        <systemPath>${basedir}\libs\com.bilibili.rsa.jar</systemPath>
                     </dependency>
                 </dependencies>    
                 <executions>
