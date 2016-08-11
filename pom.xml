@@ -36,7 +36,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>favorite.xml</projectFile>
+                            <projectFile>GET_Access_Key.xml</projectFile>
                             <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=Hello World!</value>
