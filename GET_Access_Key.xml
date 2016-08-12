@@ -53,9 +53,7 @@ String publicKey = b;
 String arg = rsa_string;
 log.info rsa_string
 App app = new App();
-log.info publicKey
 app.loadPublicKey(publicKey);
-log.info app.getPublicKey()
 String encode = app.encrypt(app.getPublicKey(),arg);
 log.info encode
 //params_list1 = ['userid=nixuepeng','pwd='+encode]
