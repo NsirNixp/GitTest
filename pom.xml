@@ -5,10 +5,10 @@
     <artifactId>cml</artifactId>
     <packaging>pom</packaging>
     <version>2.0</version>
-    <name>SoapUI Test</name>
+    <name>SoapUITest</name>
     <modules>
-        <module>../tianqi</module>
-        <module>../test2</module>
-        <module>../test1</module>
+        <module>tianqi</module>
+        <module>test2</module>
+        <module>test1</module>
     </modules>
 </project>
