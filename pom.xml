@@ -9,5 +9,6 @@
     <modules>
         <module>test1</module>
         <module>test2</module>
+        <module>tianqi</module>
     </modules>
 </project>
