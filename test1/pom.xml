@@ -39,14 +39,14 @@
                         <artifactId>rsa</artifactId>
                         <version>1.0.0</version>
                         <scope>system</scope>
-                        <systemPath>${basedir}/libs/com.bilibili.rsa.jar</systemPath>
+                        <systemPath>${basedir}/../libs/com.bilibili.rsa.jar</systemPath>
                     </dependency>
                     <dependency>
                         <groupId>commons-codec</groupId>
                         <artifactId>commons-codec</artifactId>    
                         <version>1.4</version>
                         <scope>system</scope>
-                        <systemPath>${basedir}/libs/commons-codec-1.4.jar</systemPath>
+                        <systemPath>${basedir}/../libs/commons-codec-1.4.jar</systemPath>
                     </dependency>
                 </dependencies>    
                 <executions>
