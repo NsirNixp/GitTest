@@ -7,8 +7,8 @@
     <version>2.0</version>
     <name>SoapUI Test</name>
     <modules>
-        <module>test1</module>
-        <module>test2</module>
         <module>tianqi</module>
+        <module>test2</module>
+        <module>test1</module>
     </modules>
 </project>
