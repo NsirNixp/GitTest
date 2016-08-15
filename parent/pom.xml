@@ -7,8 +7,8 @@
     <version>2.0</version>
     <name>SoapUITest</name>
     <modules>
-        <module>../tianqi/</module>
-        <module>../test2/</module>
-        <module>../test1/</module>
+        <module>../tianqi/pom.xml</module>
+        <module>../test2/pom.xml</module>
+        <module>../test1/pom.xml</module>
     </modules>
 </project>
