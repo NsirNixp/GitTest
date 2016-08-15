@@ -63,7 +63,7 @@
                             </projectProperties>
                         </configuration>
                     </execution>
-                    <execution>
+                    <execution1>
                         <phase>test2</phase>
                         <goals>
                             <goal>test2</goal>
@@ -75,7 +75,7 @@
                                 <value>message=Hello World!</value>
                             </projectProperties>
                         </configuration>
-                    </execution>
+                    </execution1>
                 </executions>
             </plugin>
         </plugins>
