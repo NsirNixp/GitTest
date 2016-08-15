@@ -5,7 +5,12 @@
     <artifactId>cml</artifactId>
     <packaging>pom</packaging>
     <version>2.0</version>
-    <name>SoapUITest</name>
+    <name>parent</name>
+
+    <properties>  
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+    </properties>
+
     <modules>
         <module>../tianqi</module>
         <module>../test2</module>
