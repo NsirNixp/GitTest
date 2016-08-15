@@ -78,34 +78,6 @@
                             </projectProperties>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>test3</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <projectFile>GET_Access_Key_test1.xml</projectFile>
-                            <encoding>utf-8</encoding>
-                            <projectProperties>
-                                <value>message=Hello World!</value>
-                            </projectProperties>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>test4</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <projectFile>GET_Access_Key_test2.xml</projectFile>
-                            <encoding>utf-8</encoding>
-                            <projectProperties>
-                                <value>message=Hello World!</value>
-                            </projectProperties>
-                        </configuration>
-                    </execution>
                 </executions>
             </plugin>
         </plugins>
