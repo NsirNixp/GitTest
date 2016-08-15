@@ -12,7 +12,12 @@
         <relativePath>../maven_pro/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <pluginRepositories>
+        <pluginRepository>
+            <id>SmartBearPluginRepository</id>
+            <url>http://www.soapui.org/repository/maven2/</url>
+        </pluginRepository>
+    </pluginRepositories>
     <artifactId>cmsi-web</artifactId>
     <build>
         <plugins>
