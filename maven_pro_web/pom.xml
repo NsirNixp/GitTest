@@ -17,9 +17,9 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.smartbear.soapui</groupId>
-                <artifactId>soapui-pro-maven-plugin</artifactId>
-                <version>4.6.1</version>
+                <!--<groupId>com.smartbear.soapui</groupId>-->
+                <!--<artifactId>soapui-pro-maven-plugin</artifactId>-->
+                <!--<version>4.6.1</version>-->
                 <dependencies>
                     <dependency>
                         <groupId>rsa</groupId>
