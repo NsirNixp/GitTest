@@ -49,7 +49,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>maven_pro_web/aaaa.xml</projectFile>
+                            <projectFile>../maven_pro_web/aaaa.xml</projectFile>
                             <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=Hello World!</value>
