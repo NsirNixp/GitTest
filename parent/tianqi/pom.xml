@@ -51,9 +51,10 @@
                 </dependencies>    
                 <executions>
                     <execution>
-                        <phase>test1</phase>
+                        <id>test1</id>
+                        <phase>test</phase>
                         <goals>
-                            <goal>test1</goal>
+                            <goal>test</goal>
                         </goals>
                         <configuration>
                             <projectFile>aaaa.xml</projectFile>
@@ -63,10 +64,11 @@
                             </projectProperties>
                         </configuration>
                     </execution>
-                    <execution1>
-                        <phase>test2</phase>
+                    <execution>
+                        <id>test2</id>
+                        <phase>test</phase>
                         <goals>
-                            <goal>test2</goal>
+                            <goal>test</goal>
                         </goals>
                         <configuration>
                             <projectFile>GET_Access_Key.xml</projectFile>
@@ -75,7 +77,7 @@
                                 <value>message=Hello World!</value>
                             </projectProperties>
                         </configuration>
-                    </execution1>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
