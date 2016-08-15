@@ -6,7 +6,7 @@
     </properties>
     <groupId>com.smartbear.samples1</groupId>
     <artifactId>soapui-maven2-plugin</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>Test1</name>
     <url>http://maven.apache.org</url>
