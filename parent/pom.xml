@@ -51,7 +51,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>aaaa.xml</projectFile>
+                            <projectFile>tianqi/aaaa.xml</projectFile>
                             <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=Hello World!</value>
@@ -65,7 +65,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>GET_Access_Key.xml</projectFile>
+                            <projectFile>tianqi/GET_Access_Key.xml</projectFile>
                             <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=Hello World!</value>
