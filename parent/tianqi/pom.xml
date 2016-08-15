@@ -51,12 +51,25 @@
                 </dependencies>    
                 <executions>
                     <execution>
-                        <phase>test</phase>
+                        <phase>test1</phase>
                         <goals>
-                            <goal>test</goal>
+                            <goal>test1</goal>
                         </goals>
                         <configuration>
                             <projectFile>aaaa.xml</projectFile>
+                            <encoding>utf-8</encoding>
+                            <projectProperties>
+                                <value>message=Hello World!</value>
+                            </projectProperties>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <phase>test2</phase>
+                        <goals>
+                            <goal>test2</goal>
+                        </goals>
+                        <configuration>
+                            <projectFile>GET_Access_Key.xml</projectFile>
                             <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=Hello World!</value>
