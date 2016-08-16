@@ -12,8 +12,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
     </properties>
     <modules>
-        <module>tianqi</module>
-        <module>test2</module>
-        <module>test1</module>
+        <module>../tianqi</module>
+        <module>../test2</module>
+        <module>../test1</module>
     </modules>
 </project>
