@@ -15,6 +15,6 @@
         <module>../tianqi</module>
         <module>../test2</module>
         <module>../test1</module>
-        <module>../accnout</module>
+        <module>../account</module>
     </modules>
 </project>
