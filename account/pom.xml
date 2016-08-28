@@ -56,7 +56,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>../test1/.accountxml</projectFile>
+                            <projectFile>../account/account.xml</projectFile>
                             <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=Hello World!</value>
