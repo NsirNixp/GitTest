@@ -12,8 +12,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
     </properties>
     <modules>
-        <module>../test2</module>
-        <module>../test1</module>
-        <module>../account</module>
+        <module>../favorite_test</module>
     </modules>
 </project>

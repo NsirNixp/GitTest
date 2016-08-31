@@ -4,11 +4,11 @@
     <properties>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     </properties>
-    <groupId>com.smartbear.samples2</groupId>
+    <groupId>com.smartbear.samples1</groupId>
     <artifactId>soapui-maven2-plugin</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Test2</name>
+    <name>favorite_test</name>
     <url>http://maven.apache.org</url>
     <pluginRepositories>
         <pluginRepository>
@@ -20,7 +20,7 @@
          <groupId>com.kaimei.datacenter</groupId>
          <artifactId>cml</artifactId>
          <version>2.0</version>
-         <relativePath>../parent/pom.xml</relativePath>
+         <relativePath>../pom.xml</relativePath>
     </parent> -->
     <build>
         <plugins>
@@ -56,7 +56,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>../test2/GET_Access_Key.xml</projectFile>
+                            <projectFile>../favorite_test/favorite_test.xml</projectFile>
                             <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=Hello World!</value>
