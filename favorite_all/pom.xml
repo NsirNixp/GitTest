@@ -4,11 +4,11 @@
     <properties>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     </properties>
-    <groupId>map</groupId>
-    <artifactId>map</artifactId>
+    <groupId>com.smartbear.samples.all</groupId>
+    <artifactId>soapui-maven2-plugin.all</artifactId>
     <packaging>pom</packaging>
-    <version>map-1.0</version>
-    <name>map</name>
+    <version>1.0.all</version>
+    <name>favorite_all</name>
     <url>http://maven.apache.org</url>
     <pluginRepositories>
         <pluginRepository>
@@ -56,10 +56,11 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <projectFile>map.xml</projectFile>
+                            <projectFile>favorite_all/favorite_test.xml</projectFile>
                             <encoding>utf-8</encoding>
+                            <endpoint>${EndPoint}</endpoint>
                             <projectProperties>
-                                <value>message=地理坐标</value>
+                                <value>message=收藏功能部分测试用例</value>
                             </projectProperties>
                         </configuration>
                     </execution>
