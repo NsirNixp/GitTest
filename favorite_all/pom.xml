@@ -58,7 +58,7 @@
                         <configuration>
                             <projectFile>favorite_all/favorite_test.xml</projectFile>
                             <encoding>utf-8</encoding>
-                            <endpoint>${EndPoint}</endpoint>
+                            <!-- <endpoint>${EndPoint}</endpoint> -->
                             <projectProperties>
                                 <value>message=收藏功能部分测试用例</value>
                             </projectProperties>
