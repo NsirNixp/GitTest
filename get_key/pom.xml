@@ -56,10 +56,20 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
+                            <filesets>
+                                <fileset>
+                                    <directory>${project.build.directory}</directory>
+                                        <includes>
+                                            <include>*.log</include>
+                                        </includes>
+                                        <followSymlinks>false</followSymlinks>
+                                </fileset>
+                            </filesets>
                             <projectFile>get_key/GET_Access_Key.xml</projectFile>
                             <endpoint>${EndPoint}</endpoint>
                             <outputFolder>${project.build.directory}/soapui-reports</outputFolder>
                             <encoding>utf-8</encoding>
+                            <printReport>true</printReport>
                             <projectProperties>
                                 <value>message=获取accesskey</value>
                             </projectProperties>
