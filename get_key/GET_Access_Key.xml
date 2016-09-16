@@ -464,25 +464,24 @@ def teststep_loop(){
 	return teststep_list
 }
 
-//https://passport.bilibili.com</script></con:config></con:testStep><con:testStep type="groovy" name="test" id="82c14cfc-3a49-4960-83ee-504338da3b61"><con:settings/><con:config><script>import groovy.lang.Binding
-import groovy.util.GroovyScriptEngine
-
-//def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
-//String projectPath = groovyUtils.projectPath
-//
-//GroovyScriptEngine gse = new GroovyScriptEngine(projectPath)
-//
-//externalScript = gse.loadScriptByName("wocao.groovy")
-//instance = externalScript.newInstance()
-//
-//assert instance != null
-//def wocao = instance.wocao()
-//log.info wocao
-
-instance = new GroovyScriptEngine(new com.eviware.soapui.support.GroovyUtils(context).projectPath).loadScriptByName("wocao.groovy").newInstance()
-assert instance != null
-def wocao = instance.wocao()
-log.info wocao</script></con:config></con:testStep><con:testStep type="groovy" name="test1" id="63f30b97-4f8e-4905-9237-028ea922b57a"><con:settings/><con:config><script>//evaluate(new File('/Users/Hugo/Test_nsirone/get_key/wocao.groovy');
+//https://passport.bilibili.com</script></con:config></con:testStep><con:testStep type="groovy" name="test" id="82c14cfc-3a49-4960-83ee-504338da3b61"><con:settings/><con:config><script>//import groovy.lang.Binding 
+//import groovy.util.GroovyScriptEngine  
+//def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context) 
+//String projectPath = groovyUtils.projectPath 
+// 
+//GroovyScriptEngine gse = new GroovyScriptEngine(projectPath) 
+// 
+//externalScript = gse.loadScriptByName("wocao.groovy") 
+//instance = externalScript.newInstance() 
+// 
+//assert instance != null 
+//def wocao = instance.wocao() 
+//log.info wocao  
+//执行外部的groovy脚本
+//instance = new GroovyScriptEngine(new com.eviware.soapui.support.GroovyUtils(context).projectPath).loadScriptByName("wocao.groovy").newInstance() 
+//assert instance != null 
+//def wocao = instance.wocao() 
+//log.info wocao</script></con:config></con:testStep><con:testStep type="groovy" name="test1" id="63f30b97-4f8e-4905-9237-028ea922b57a"><con:settings/><con:config><script>//evaluate(new File('/Users/Hugo/Test_nsirone/get_key/wocao.groovy');
 //import groovy.lang.Binding
 //import groovy.util.GroovyScriptEngine
 //
