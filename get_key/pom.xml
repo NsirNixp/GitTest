@@ -27,7 +27,7 @@
             <plugin>
                 <groupId>com.smartbear.soapui</groupId>
                 <artifactId>maven-soapui-extension-plugin</artifactId>
-                <version>5.5.1</version>
+                <version>5.1.1</version>
                 <dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
