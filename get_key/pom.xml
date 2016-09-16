@@ -56,7 +56,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <filesets>
+                            <!-- <filesets>
                                 <fileset>
                                     <directory>${project.basedir}</directory>
                                         <includes>
@@ -64,7 +64,7 @@
                                         </includes>
                                         <followSymlinks>false</followSymlinks>
                                 </fileset>
-                            </filesets>
+                            </filesets> -->
                             <projectFile>get_key/GET_Access_Key.xml</projectFile>
                             <endpoint>${EndPoint}</endpoint>
                             <outputFolder>${project.build.directory}/soapui-reports</outputFolder>
