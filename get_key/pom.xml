@@ -79,7 +79,7 @@
                                     <value>${project.build.directory}/soapui-logs/</value>
                                 </property>
                                 <property>
-                                    <name>global-groovy.logroot</name>
+                                    <name>groovy.logroot</name>
                                     <value>${project.build.directory}/soapui-logs/wocao/</value>
                                 </property>
                             </soapuiProperties>
