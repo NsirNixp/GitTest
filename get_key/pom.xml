@@ -26,11 +26,17 @@
         <plugins>
             <plugin>
                 <groupId>com.smartbear.soapui</groupId>
-                <!-- 这两个版本有不同的东西，这个东西是在设置global-groovy.log的生成的位置的时候发现的 -->
-                <!-- 之前的mvn log生成的时候是在默认的位置，即pom的路径，但是可以修改统一的log路径 -->
-                <!-- 之前的soapui不能修改global-groovy.log是个bug，然后5.*往上的版本修改了这个问题 -->
-                <!-- 之前我用的是下边的plugin的版本，现在修改为通用版的是soapui-maven-plugin，现在可以用 -->
-                <!-- <artifactId>soapui-pro-maven-plugin</artifactId> -->
+                <!-- 这两个版本有不同的东西，这个东西是在设置global-groovy.log的生成的位置的时候发现的
+                之前的mvn log生成的时候是在默认的位置，即pom的路径，但是可以修改统一的log路径
+                之前的soapui不能修改global-groovy.log是个bug，然后5.*往上的版本修改了这个问题
+                之前我用的是下边的plugin的版本，现在修改为通用版的是soapui-maven-plugin，现在可以用
+                <artifactId>soapui-pro-maven-plugin</artifactId>
+                global-groovy.log的路径包含在
+                <property>
+                    <name>soapui.logroot</name>
+                        <value>${project.build.directory}/soapui-logs/</value>
+                </property>
+                位置下，5.0.0修改的位置在soapui-log4j.xml文件夹下的56行，声明的GLOBAL_GROOVY.LOG变量，修改了这个bug -->
                 <artifactId>soapui-maven-plugin</artifactId>
                 <version>5.0.0</version>
                 <dependencies>
