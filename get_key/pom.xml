@@ -58,6 +58,7 @@
                         <configuration>
                             <projectFile>get_key/GET_Access_Key.xml</projectFile>
                             <endpoint>${EndPoint}</endpoint>
+                            <outputFolder>${project.build.directory}/soapui-reports</outputFolder>
                             <encoding>utf-8</encoding>
                             <projectProperties>
                                 <value>message=获取accesskey</value>
