@@ -80,7 +80,7 @@
                                 </property>
                                 <property>
                                     <name>groovy.logroot</name>
-                                    <value>${project.build.directory}/soapui-logs/wocao/</value>
+                                    <value>${basedir}/soapui-logs/wocao/</value>
                                 </property>
                             </soapuiProperties>
                         </configuration>
