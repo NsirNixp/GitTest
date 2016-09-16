@@ -63,6 +63,12 @@
                             <projectProperties>
                                 <value>message=获取accesskey</value>
                             </projectProperties>
+                            <soapuiProperties>
+                                <property>
+                                    <name>soapui.logroot</name>
+                                    <value>${project.build.directory}/soapui-logs/</value>
+                                </property>
+                            </soapuiProperties>
                         </configuration>
                     </execution>
                 </executions>
