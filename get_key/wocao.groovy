@@ -1,3 +1,0 @@
-def wocao(){
-	println 'wocao'
-}
