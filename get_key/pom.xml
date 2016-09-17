@@ -82,7 +82,7 @@
                             <encoding>utf-8</encoding>
                             <printReport>true</printReport>
                             <projectProperties>
-                                <value>message=accesskey</value>
+                                <value>message=get_accesskey</value>
                             </projectProperties>
                             <soapuiProperties>
                                 <property>
